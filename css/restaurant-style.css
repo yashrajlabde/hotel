@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Frank+Ruhl+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
+body{
+    padding: 0;
+    margin: 0;
+    background-size: cover;
+    
+}
+
+*,*:before,
+*:after{
+       box-sizing: inherit;
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+}
+
+.header{
+    width: 100%;
+    height: 110vh;
+    position:relative;
+}
+
+/* .carousal-container{
+    width:100%;
+    margin:0;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousal-slide{
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+}
+
+.carousal-slide img{
+    width: 100%;
+}
+
+.food-title{
+    position: absolute;
+    top: 15%;
+    left: 27%;
+    color: rgb(238, 255, 0);
+    z-index: 13;
+    font-size: 8vw;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Cabin', sans-serif;
+   
+}
+
+.food-title{
+    background-color: rgb(0, 0, 0,0.5);
+}
+
+#prevBtn{
+    position:absolute;
+    top: 42%;
+    z-index: 10;
+    left: 15%;
+    color: whitesmoke;
+    font-size: 40px;
+    cursor: pointer;
+    
+}
+
+#nextBtn{
+    position:absolute;
+    top: 42%;
+    z-index: 10;
+    right: 15%;
+    color: whitesmoke;
+    font-size: 40px;
+    cursor: pointer;
+} */
+
+.navigation{
+    width: 100px;
+    height: 100%;
+    display: block;
+    position: absolute;
+    padding-right: 40px;
+    top: 0;
+    left: 0;
+    perspective: 800;
+    border-radius: 0% 0% 0% 0%;
+    transition: all 800ms cubic-bezier(.9,0,.33,.1);
+    position: fixed;
+    z-index: 16;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    display: block;
+    position: absolute;
+    top: 8%;
+    left: 15%; 
+    cursor: pointer;  
+    transform-style: preserve-3d;   
+    transform: rotateY(-360deg);   
+    transition: all 800ms cubic-bezier(.9, 0, .33, 1);
+  }
+
+.navigation-icon{
+    width: 55px;
+    height: 44px;
+    display: block;
+    position: relative;
+    top:3%;
+    left:35%;
+    cursor: pointer;
+    transition: all 800ms cubic-bezier(.9,0,.33,.1);
+}
+
+.navigation-icon .topbar{
+    position: absolute;
+    top: 10px;
+    width: 55px;
+    height: 2px;
+    background: rgb(250, 170, 23);
+    transform: rotate(0);
+    transition: all 800ms cubic-bezier(.9,0,.33,.1);
+}
+
+.navigation-icon .middlebar{
+    position: absolute;
+    top: 20px;
+    width: 55px;
+    height: 2px;
+    background: rgb(250, 170, 23);
+    transform: rotate(0);
+    transition: all 800ms cubic-bezier(.9,0,.33,.1);
+}
+
+.navigation-icon .bottombar{
+    position: absolute;
+    top: 30px;
+    width: 35px;
+    height: 2px;
+    background: rgb(250, 170, 23);
+    transform: rotate(0);
+    transition: all 800ms cubic-bezier(.9,0,.33,.1);
+}
+
+.navigation .navigation_ul{
+    position: absolute;
+    top:40%;
+    right: 20%;
+    opacity: 0;
+    transform: rotateY(-90deg) translateX(-300px);
+    transition: all 800ms cubic-bezier(.9,0,.33,.1); 
+}
+
+.navigation .navigation_ul li{
+    list-style: none;
+    text-align: right;
+}
+
+.navigation .navigation_ul a{
+    display: block;
+    font-size: 3vh;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: wheat;
+    margin-bottom: 15px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Cabin', sans-serif;
+    font-family: 'Oswald', sans-serif;
+}
+
+.navigation_ul li:nth-child(3) a{
+     color: rgb(240, 247, 244);
+}
+
+.navigation-open{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background: rgb(46, 2, 2);
+    border-radius: 0% 1% 1% 0%;
+    position: fixed;
+    z-index: 16;
+    
+}
+
+.navigation-open .navigation-icon{
+    left: 80%;
+    top: 3%;
+}
+
+.navigation-open .topbar{
+    width: 55px;
+    top: 21px;
+    transform: rotate(45deg);
+}
+
+.navigation-open .middlebar{
+  width: 0;
+  top: 22px;
+  opacity: 0;
+  visibility: hidden; 
+  transform: translateX(30px);
+}
+
+.navigation-open .bottombar{
+    width: 55px;
+    top: 21px;
+    transform: rotate(-45deg);
+}
+
+.navigation-open .navigation_ul{
+    transform: rotateY(0) translateX(0);
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    top:40%;
+    right: 20%;
+}
+
+
+.menu{
+    height: 100%;
+}
+
+.menu-wrapper{
+    height: 100%;
+}
+
+.row3{
+    height: 100%;
+}
+
+
+.brunch{
+    background-image: url('../img/brunch.jpg');
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    padding: 0;
+    /* position: relative; */
+}
+
+
+.dinner{
+    background-image: url('../img/dinner.jpg');
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    padding: 0;
+}
+
+.beverage{
+    background-image: url('../img/beverage.jpg');
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    padding: 0;
+}
+
+.brunch-flexbox , .dinner-flexbox, .beverage-flexbox{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    color: whitesmoke;
+    -webkit-text-stroke: 0.45px black;
+    background-color: rgb(0, 0, 0,0.3);
+    
+    
+}
+
+.brunch-flexbox h2,.dinner-flexbox h2, .beverage-flexbox h2{
+    font-size: 5vw;
+}
+
+
+.brunch-flexbox button,.dinner-flexbox button, .beverage-flexbox button{
+    background-color: rgb(5, 5, 4,0.7);
+    border: none;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    outline: none;
+}
+.brunch-flexbox button i,.dinner-flexbox button i, .beverage-flexbox button i{
+    color: rgb(221, 197, 197);
+}
+
+.menuu{
+    overflow: hidden;
+}
+
+.menu:hover{
+    cursor: pointer;
+}
+.menuu ::before{
+    content: '';
+    border: 12px solid whitesmoke;
+    position: absolute;
+    top:-12px;
+    bottom: -12px;
+    left:-12px;
+    right:-12px;
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    transition: all 300ms linear;
+   z-index: -2;
+
+}
+
+.menuu :hover::before{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 12px solid rgba(205, 188, 157,1);
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    transition: all 300ms linear ease-in-out;
+    z-index: 3;
+    background-color: rgb(0, 0, 0,0.4);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    height: 50px;
+    background: rgb(68, 5, 5);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 4;
+}
+
+
+
+.footer img{
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 8px;
+}
+
+.footer > .name{
+    margin-right: 15px;
+    color: rgb(189, 176, 176);
+    margin-left: 15px;
+    margin-top: 10px;
+    font-size: 1.88vw;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media only screen and (max-width:800px) and (orientation:portrait){
+
+    .carousal-container{
+        height: 50%;
+    }
+}
+ */
+
+
+
+ @media only screen and (max-width:991px){
+     .header{
+         height: 330vh;
+     }
+
+     .menu{
+         height:100%;
+     }
+      
+     .brunch,.beverage, .dinner{
+         height: 33.34%;
+     }
+
+     .brunch-flexbox h2,.dinner-flexbox h2, .beverage-flexbox h2{
+        font-size: 10vw;
+    }
+    
+
+
+ }
+
+
+
+
+/* FOOTER */
+
+
+@media only screen and (max-width: 1023px){
+    .footer > .name{
+        margin-right: 15px;
+        color: rgb(189, 176, 176);
+        margin-left: 15px;
+        margin-top: 10px;
+        font-size: 3.5vw;
+        font-family: 'Oswald', sans-serif;
+    }
+
+}
+@media only screen and (max-width: 1023px) and (orientation:landscape){
+    .footer > .name{
+        margin-right: 15px;
+        color: rgb(189, 176, 176);
+        margin-left: 0px;
+        margin-top: 0px;
+        font-size: 4vw;
+        font-family: 'Oswald', sans-serif;
+    }
+}
+
+
+
+
+
+@media only screen and (min-width: 1480px) {
+
+
+    .footer > .name{
+        margin-right: 15px;
+        color: rgb(189, 176, 176);
+        margin-left: 15px;
+        margin-top: 0px;
+        font-size: 1.18vw;
+        font-family: 'Oswald', sans-serif;
+    }
+    
+    
+    
+
+}
+
+
+
+
+
+
+
+
+

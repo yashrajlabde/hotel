@@ -1,0 +1,22 @@
+@import "./restaurant-style.css";
+
+.navigation_ul li:nth-child(3) a{
+    color: wheat;
+}
+
+.navigation_ul li:nth-child(4) a{
+    color: rgb(240, 247, 244);
+}
+
+.brunch{
+    background-image: url('../img/cocktail.jpg');
+}
+
+.dinner{
+    background-image: url('../img/mocktail.jpg');
+}
+
+.beverage{
+    background-image: url('../img/special.jpg');
+}
+

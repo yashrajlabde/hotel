@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Frank+Ruhl+Libre&display=swap');
+
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-size: cover;
+}
+
+*,*:before,
+*:after{
+       box-sizing: inherit;
+       padding: 0;
+       margin: 0;
+}
+
+.header{
+    background-image: url('../img/background2-op.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 110vh;
+    background-size: cover;
+    position:relative;
+    background-attachment: fixed;
+}
+
+.intro{
+    padding-top: 8vh;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.intro p{
+    color: rgb(0, 0, 0);
+    font-weight: 100;
+}
+
+.intro p:nth-child(1){
+    padding-top: 40px;
+}
+
+.intro p:nth-child(2){
+    padding-top: 5vh;
+    text-align: center;
+}
+
+.intro p:nth-child(2) span{
+    background-color: rgb(139, 185, 32);
+}
+
+.intro p:nth-child(3){
+    padding-top: 3vh;
+    text-align: center;
+}
+
+.intro p:nth-child(3) span{
+    background-color: rgb(139, 185, 32);
+}
+
+.navigation{
+    width: 100px;
+    height: 100%;
+    display: block;
+    position: absolute;
+    padding-right: 40px;
+    top: 0;
+    left: 0;
+    perspective: 800;
+    border-radius: 0% 0% 0% 0%;
+    transition: all 800ms cubic-bezier(.9,0,.33,.1);
+    position: fixed;
+    z-index: 16;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    display: block;
+    position: absolute;
+    top: 8%;
+    left: 15%; 
+    cursor: pointer;  
+    transform-style: preserve-3d;   
+    transform: rotateY(-360deg);   
+    transition: all 800ms cubic-bezier(.9, 0, .33, 1);
+  }
+
+.navigation-icon{
+    width: 55px;
+    height: 44px;
+    display: block;
+    position: relative;
+    top:3%;
+    left:35%;
+    cursor: pointer;
+    transition: all 800ms cubic-bezier(.9,0,.33,.1);
+}
+
+.navigation-icon .topbar{
+    position: absolute;
+    top: 10px;
+    width: 55px;
+    height: 2px;
+    background: rgb(250, 170, 23);
+    transform: rotate(0);
+    transition: all 800ms cubic-bezier(.9,0,.33,.1);
+}
+
+.navigation-icon .middlebar{
+    position: absolute;
+    top: 20px;
+    width: 55px;
+    height: 2px;
+    background: rgb(250, 170, 23);
+    transform: rotate(0);
+    transition: all 800ms cubic-bezier(.9,0,.33,.1);
+}
+
+.navigation-icon .bottombar{
+    position: absolute;
+    top: 30px;
+    width: 35px;
+    height: 2px;
+    background: rgb(250, 170, 23);
+    transform: rotate(0);
+    transition: all 800ms cubic-bezier(.9,0,.33,.1);
+}
+
+.navigation .navigation_ul{
+    position: absolute;
+    top:40%;
+    right: 20%;
+    opacity: 0;
+    transform: rotateY(-90deg) translateX(-300px);
+    transition: all 800ms cubic-bezier(.9,0,.33,.1); 
+}
+
+.navigation .navigation_ul li{
+    list-style: none;
+    text-align: right;
+}
+
+.navigation .navigation_ul a{
+    display: block;
+    font-size: 3vh;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: wheat;
+    margin-bottom: 15px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.navigation_ul li:nth-child(2) a{
+     color: rgb(240, 247, 244);
+}
+
+.navigation-open{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background: rgb(46, 2, 2);
+    border-radius: 0% 1% 1% 0%;
+    position: fixed;
+    z-index: 12;
+    
+}
+
+.navigation-open .navigation-icon{
+    left: 80%;
+    top: 3%;
+}
+
+.navigation-open .topbar{
+    width: 55px;
+    top: 21px;
+    transform: rotate(45deg);
+}
+
+.navigation-open .middlebar{
+  width: 0;
+  top: 22px;
+  opacity: 0;
+  visibility: hidden; 
+  transform: translateX(30px);
+}
+
+.navigation-open .bottombar{
+    width: 55px;
+    top: 21px;
+    transform: rotate(-45deg);
+}
+
+.navigation-open .navigation_ul{
+    transform: rotateY(0) translateX(0);
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    top:40%;
+    right: 20%;
+}
+
+.kitchen{
+    height: 90vh;
+    background-image: url('../img/kichenn-opp.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.row{
+    padding-top: 15%;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.kitchen-data{
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    justify-content: space-around;
+    color: rgb(228, 211, 211);
+    padding: 10px;
+    justify-content: space-between;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.kitchen-data p:nth-child(1){
+    font-size: 3.5vw;
+    flex-grow: 2.5;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: rgb(252, 249, 249);
+}
+
+.kitchen-data p:nth-child(2){
+    font-size: 2vw;
+    flex-grow: 1;
+}
+
+.kitchen-data p:nth-child(3){
+    font-size: 2vw;
+    flex-grow: 3;
+}
+
+.kitchen-data p span{
+    background-color: rgb(0, 0, 0,0.5);
+}
+
+.row1{
+    padding-top: 15%;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.restaurant{
+    background-image: url('../img/restaurant2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    background-attachment: fixed;
+}
+
+.restaurant-data, .bar-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.restaurant-data p:nth-child(1), .bar-data p:nth-child(1){
+    font-size: 7vw;
+    font-family: 'Roboto Condensed', sans-serif;
+    
+}
+
+.restaurant-data p:nth-child(1) span{
+    background-color: rgba(41, 9, 9, 0.8);
+    border-radius: 5px;
+    font-stretch: expanded;
+ 
+    
+}
+
+.restaurant-data p:nth-child(2), .bar-data p:nth-child(2){
+    font-size: 1vw;
+    text-align: center;
+}
+
+.restaurant-data p:nth-child(2) span{
+    background-color: rgba(148, 0, 0, 0.8);
+    color: white;
+    font-stretch: expanded;
+}
+
+.bar{
+    background-image: url('../img/bar-opp.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    background-attachment: fixed;
+}
+
+.bar-data p:nth-child(1) span{
+    background-color: rgba(41, 9, 9, 0.8);
+    border-radius: 5px;
+    border-radius: 3px;
+    font-stretch: expanded;
+}
+
+.bar-data p:nth-child(2) span{
+    background-color: rgba(148, 0, 0, 0.8);
+    color: white;
+    font-stretch: expanded;
+}
+
+.footer{
+    height: 50px;
+    background: rgb(68, 5, 5);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
+.footer img{
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 8px;
+}
+
+.footer > .name{
+    margin-right: 15px;
+    color: rgb(189, 176, 176);
+    margin-left: 15px;
+    margin-top: 10px;
+    font-size: 1.88vw;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 600px){
+
+    .intro p{
+        font-size: 2.2vw ;
+    }
+
+}  
+
+
+
+@media only screen and (max-width: 991px){
+    .row{
+        padding-top: 0;
+    }
+    .kitchen-photo-wrapper{
+        padding: 0;
+    }
+    .kitchen-data-wrapper{
+        padding: 0;
+    }
+    .kitchen-data-wrapper1{
+        padding: 0;
+    }
+    .kitchen-data{
+        align-items: center;
+        padding-top: 40px;
+        height: 50vh;
+    }
+    .kitchen-data p:nth-child(1){
+        font-size: 9vw;
+        flex-grow: 2.5;
+    }
+    .kitchen-data p:nth-child(2){
+        font-size: 4.5vw;
+        flex-grow: 1;
+        text-align: center;
+    }
+    .kitchen-data p:nth-child(3){
+        font-size: 4.5vw;
+        flex-grow: 3;
+        text-align: center;
+    }
+    .restaurant-data p:nth-child(1),.bar-data p:nth-child(1){
+        font-size: 11vw;
+        
+    }
+    .restaurant-data p:nth-child(2), .bar-data p:nth-child(2) {
+        font-size: 3vw;
+        text-align: center;
+        padding-top: 10vw;
+    }
+
+    
+
+}
+
+
+
+
+@media only screen and (min-width: 450px) and (max-width:991px) and (orientation:landscape){
+    .kitchen{
+        height:180vh;
+    }
+    .restaurant{
+        height: 180vh;
+    }
+    .bar{
+        height: 180vh;
+    }
+    
+}
+
+
+/* I-PAD PORTRAIT */
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation:portrait) {
+
+    .restaurant-data p:nth-child(2), .bar-data p:nth-child(2) {
+        font-size: 3vw;
+        text-align: center;
+        padding-top: 10vw;
+    }
+    
+  }
+
+
+  /* I-PAD LANDSCAPE */
+
+  @media only screen and (min-device-width: 481px) and (max-device-width: 1440px)and (-webkit-min-device-pixel-ratio: 2) and (orientation:landscape) {
+
+    .restaurant-data p:nth-child(2), .bar-data p:nth-child(2) {
+        font-size: 2vw;
+        text-align: center;
+        padding-top: 10vw;
+    }
+    
+  }
+
+
+/* JIO PHONE */
+
+@media only screen and (max-width:240px){
+    .intro p{
+        font-size: 4vw;
+    }
+}
+
+
+/* FOOTER */
+
+
+@media only screen and (max-width: 1023px){
+    .footer > .name{
+        margin-right: 15px;
+        color: rgb(189, 176, 176);
+        margin-left: 15px;
+        margin-top: 10px;
+        font-size: 3.5vw;
+        font-family: 'Oswald', sans-serif;
+    }
+
+}
+@media only screen and (max-width: 1023px) and (orientation:landscape){
+    .footer > .name{
+        margin-right: 15px;
+        color: rgb(189, 176, 176);
+        margin-left: 0px;
+        margin-top: 0px;
+        font-size: 4vw;
+        font-family: 'Oswald', sans-serif;
+    }
+}
+
+
+@media only screen and (min-width: 1480px) {
+
+
+    .footer > .name{
+        margin-right: 15px;
+        color: rgb(189, 176, 176);
+        margin-left: 15px;
+        margin-top: 0px;
+        font-size: 1.18vw;
+        font-family: 'Oswald', sans-serif;
+    }
+    
+    
+    
+
+}
+
+
+
+
+
+
+
+
+
+

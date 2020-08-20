@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link rel="stylesheet" href="./css/about-style.css">
+    <title>THE PIQUANT</title>
+</head>
+<body>
+    <header class="header">
+        <div class="col-md-8 col-md-offset-2 col-lg-10 col-lg-offset-1 about">
+            <div class="row">
+              <div class="row-heading">ABOUT</div>
+              <div class="row-content">We serve authentic traditional and modern cuisine.
+                
+                The menu allows you to sample a variety of different flavours and textures from the diverse regions of World.
+                
+                We have the #1 patio in the city and its heated.
+                
+                The team is dedicated to creating a totally fun atmosphere, with caring above and beyond service, to produce transportive dining.
+                
+                We have the best margaritas in the city. And Country's largest mescal and tequila bar with over 120 different labels.
+                
+                THE PIQUANT is an experience, not just a meal.</div>
+            </div>
+      
+             <div class="row1">
+                <div class="carousal-container">
+                      <i class="fas fa-angle-left" id="prevBtn"></i>
+                      <i class="fas fa-angle-right" id="nextBtn"></i>
+                        <div class="carousal-slide">
+                          <img src="./img/amb.jpg"  id="lastimage-clone" alt="">
+                          <img src="./img/food1og.jpg" alt="">
+                          <img src="./img/header-panel1.jpg" alt="">
+                          <img src="./img/bar1-op.jpg" alt="">
+                          <img src="./img/amb.jpg" alt="">
+                          <img src="./img/amb1.jpg" id="firstimage-clone" alt="">
+                      </div>
+                </div>
+              </div>  
+              </div>
+   
+        
+
+      <nav class="navigation">
+          <section class="logo"></section>
+
+          <section class="navigation-icon">
+              <div class="topbar"></div>
+              <div class="middlebar"></div>
+              <div class="bottombar"></div>
+          </section>
+
+          <ul class="navigation_ul">
+              <li><a href="./hotel.html">HOME</a></li>
+              <li><a href="./welcome.html">WELCOME</a></li>
+              <li><a href="./restaurant.html">RESTAURANT</a></li>
+              <li><a href="./bar.html">BAR</a></li>
+              <li><a href="#">ABOUT</a></li>
+          </ul>
+      </nav>
+    </header>
+    
+    <section class="footer">
+        <div class="twitter"><a href=""><img src="./img/twitter-png.png" style="width: 30px;height: 30px;" alt=""></a></div>
+        <div class="facebook"><a href=""><img src="./img/facebook1-png.png" style="width: 30px;height: 30px;" alt=""></a></div>
+        <div class="instagram"><a href=""><img src="./img/instagram-png.png" style="width: 30px;height: 30px;" alt=""></a></div>
+        <div class="name">Website by Yashraj</div>
+    </section>
+   
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            $(".navigation-icon").click(function(){
+                $(".navigation").toggleClass('navigation-open');
+            });
+       
+
+
+        // Carousal //
+
+        const carousalSlide= document.querySelector('.carousal-slide');
+                 const carousalImages= document.querySelectorAll('.carousal-slide img');
+
+                 const prevBtn = document.querySelector('#prevBtn');
+                 const nextBtn = document.querySelector('#nextBtn');
+
+                 let counter=1;
+                 const size =carousalImages[0].clientWidth;
+
+                 carousalSlide.style.transform ='translate(' +(-size * counter) +'px)';
+
+
+                 nextBtn.addEventListener('click',() =>{
+                     if(counter >= carousalImages.length - 1) return;
+                     carousalSlide.style.transition ="transform 0.4s ease-in-out";
+                     counter++;
+                     carousalSlide.style.transform ='translate(' +(-size * counter) +'px)';
+                     
+                 });
+
+                 prevBtn.addEventListener('click',() =>{
+                     if(counter <= 0) return;
+                     carousalSlide.style.transition ="transform 0.4s ease-in-out";
+                     counter--;
+                     carousalSlide.style.transform ='translate(' +(-size * counter) +'px)';
+                     
+                 });
+
+
+                 carousalSlide.addEventListener('transitionend', () =>{
+                     if(carousalImages[counter].id==='lastimage-clone'){
+                         carousalSlide.style.transition= "none";
+                         counter= carousalImages.length-2;
+                         carousalSlide.style.transform ='translate(' +(-size * counter) +'px)';
+                         }
+                     if(carousalImages[counter].id==='firstimage-clone'){
+                         carousalSlide.style.transition= "none";
+                         counter= carousalImages.length - counter;
+                         carousalSlide.style.transform ='translate(' +(-size * counter) +'px)';
+                         }      
+
+                 });
+
+                 window.onorientationchange = function() { 
+                 var orientation = window.orientation; 
+                 switch(orientation) { 
+                 case 0:
+                 case 90:
+                 case -90: window.location.reload(); 
+                 break; } 
+                 };
+                });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/home-style.css">
+    <title>THE PIQUANT</title>
+</head>
+<body>
+    <header class="header">
+        <section class="brand">
+            <div class="brand-wrapper">
+              <div class="brandname"><p>THE PIQUANT</p></div>
+            </div>  
+        </section>
+      <nav class="navigation">
+          <section class="logo"></section>
+
+          <section class="navigation-icon">
+              <div class="topbar"></div>
+              <div class="middlebar"></div>
+              <div class="bottombar"></div>
+          </section>
+
+          <ul class="navigation_ul">
+              <li><a href="#">HOME</a></li>
+              <li><a href="./welcome.html">WELCOME</a></li>
+              <li><a href="./restaurant.html">RESTAURANT</a></li>
+              <li><a href="./bar.html">BAR</a></li>
+              <li><a href="./about.html">ABOUT</a></li>
+          </ul>
+      </nav>
+    </header>
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            $(".navigation-icon").click(function(){
+                $(".navigation").toggleClass('navigation-open');
+            });
+        });
+
+    </script>
+</body>
+</html>

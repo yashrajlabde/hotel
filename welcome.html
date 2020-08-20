@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/welcome-style.css">
+    <title>THE PIQUANT</title>
+</head>
+<body>
+    <header class="header">
+        <div class="col-lg-offset-3 col-lg-6  col-md-8 col-md-offset-2 intro">
+            <p style="text-align: center;"><img src="./img/logo.png" style="width: 100px; height: 100px;" alt=""></p>
+            <p><span>It was in July 1999 that THE PIQUANT opened its doors to the public</span></p>
+            <p><span>Today, in times of staying at home, we have prepared a selection of the dishes that were part of the history of our restaurant over the last 21 years. Tasty dishes that will surely awaken nostalgia in those who have accompanied us during our lives, dedicated to trying to make them happy every time they visit us.</span></p>
+  
+        </div>  
+      <nav class="navigation">
+          <section class="logo"></section>
+
+          <section class="navigation-icon">
+              <div class="topbar"></div>
+              <div class="middlebar"></div>
+              <div class="bottombar"></div>
+          </section>
+
+          <ul class="navigation_ul">
+              <li><a href="./hotel.html">HOME</a></li>
+              <li><a href="#">WELCOME</a></li>
+              <li><a href="./restaurant.html">RESTAURANT</a></li>
+              <li><a href="">BAR</a></li>
+              <li><a href="">ABOUT</a></li>
+          </ul>
+      </nav>
+    </header>
+    <section style="background-image: url('./img/background-op.jpg'); background-attachment: fixed; height: 30vh;background-repeat:no-repeat; background-size: cover;"></section>
+    <section class="kitchen">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+                <div class="col-md-6 col-lg-6"></div>
+                <div class="col-md-6 col-lg-6 kitchen-data-wrapper">
+                    <div class="col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 kitchen-data-wrapper1">
+                        <div class="kitchen-data">
+                            <p><span> KITCHEN</span></p>
+                            <p><span>The best thing about distance is the reunion.</span></p>
+                            <p><span>We surely won't give you any chance to compromise your day.</span></p>         
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="restaurant">
+        <div class="row1">
+            <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 restaurant-wrapper">
+                <div class ="restaurant-data">
+                    <p><span>RESTAURANT</span></p>
+                    <p><span>Every dish at PIQUANT has it's own story from the traditional recipes, to modern updates that tell the history of our team. Our menu is never done - we find inspiration all around, in new ingredients, new approaches, and fresh takes on old standards.</span></p>
+                </div>
+ 
+            </div>
+        </div>
+    </section>
+    <section class="bar">
+        <div class="row1">
+            <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 bar-wrapper">
+                <div class="bar-data">
+                    <p><span>BAR</span></p>
+                    <p><span>At THE PIQUANT we pride ourselves on serving a mix of classic cocktails and our own exciting creations. We experiment constantly to find new flavours/textures to tickle your taste buds and update our list regularly to reflect the season</span></p>
+                </div>
+             </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="twitter"><a href=""><img src="./img/twitter-png.png" style="width: 30px;height: 30px;" alt=""></a></div>
+        <div class="facebook"><a href=""><img src="./img/facebook1-png.png" style="width: 30px;height: 30px;" alt=""></a></div>
+        <div class="instagram"><a href=""><img src="./img/instagram-png.png" style="width: 30px;height: 30px;" alt=""></a></div>
+        <div class="name">Website by Yashraj</div>
+    </section>
+   
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+        $(function(){
+            $(".navigation-icon").click(function(){
+                $(".navigation").toggleClass('navigation-open');
+            });
+        });
+
+    </script>
+</body>
+</html>
