@@ -14,9 +14,9 @@
         <section class="menu">
             <div class="menu-wrapper">
                   <div class="row3">
-                    <a href="./menupdf.pdf" target="_blank"><div class="col-md-4 brunch menuu"><div class="brunch-flexbox brunch-button-segment"><h2>COCKTAIL</h2><button><i class="fa fa-file" aria-hidden="true"><span>PDF</span></i></button></div></div></a>
-                    <a href="./menupdf.pdf" target="_blank"><div class="col-md-4 dinner menuu"><div class="dinner-flexbox dinner-button-segment"><h2>MOCKTAIL</h2><button><i class="fa fa-file" aria-hidden="true"><span>PDF</span></i></button></div></div></a>
-                    <a href="./menupdf.pdf" target="_blank"><div class="col-md-4 beverage menuu"><div class="beverage-flexbox beverage-buton-segment"><h2>SPECIALS</h2><button><i class="fa fa-file" aria-hidden="true"><span>PDF</span></i></button></div></div></a>
+                    <a href="menu.html" target="_blank"><div class="col-md-4 brunch menuu"><div class="brunch-flexbox brunch-button-segment"><h2>COCKTAIL</h2></div></div></a>
+                    <a href="menu.html" target="_blank"><div class="col-md-4 dinner menuu"><div class="dinner-flexbox dinner-button-segment"><h2>MOCKTAIL</h2></div></div></a>
+                    <a href="menu.html" target="_blank"><div class="col-md-4 beverage menuu"><div class="beverage-flexbox beverage-buton-segment"><h2>SPECIALS</h2></div></div></a>
                   </div>  
             </div>
         </section>
@@ -40,21 +40,6 @@
       </nav>
     </header>
     
-    <!-- <div class="carousal-container">
-        <div class="food-title"><span>EXOTIC FOOD</span></div>
-        <i class="fas fa-angle-left" id="prevBtn"></i>
-        <i class="fas fa-angle-right" id="nextBtn"></i>
-        <div class="carousal-slide">
-            <img src="./img/food4.jpg"  id="lastimage-clone" alt="">
-            <img src="./img/food1.jpg" alt="">
-            <img src="./img/food2.jpg" alt="">
-            <img src="./img/food3.jpg" alt="">
-            <img src="./img/food4.jpg" alt="">
-            <img src="./img/food1.jpg" id="firstimage-clone" alt="">
-        </div>
-    </div>
-    -->
-    
     
     <section class="footer">
         <div class="twitter"><a href=""><img src="./img/twitter-png.png" style="width: 30px;height: 30px;" alt=""></a></div>
@@ -70,65 +55,15 @@
             $(".navigation-icon").click(function(){
                 $(".navigation").toggleClass('navigation-open');
             });
-       
-        // Carousal //
 
-                 const carousalSlide= document.querySelector('.carousal-slide');
-                 const carousalImages= document.querySelectorAll('.carousal-slide img');
-
-                 const prevBtn = document.querySelector('#prevBtn');
-                 const nextBtn = document.querySelector('#nextBtn');
-
-                 let counter=1;
-                 const size =carousalImages[0].clientWidth;
-
-                 carousalSlide.style.transform ='translate(' +(-size * counter) +'px)';
-
-
-                 nextBtn.addEventListener('click',() =>{
-                     if(counter >= carousalImages.length - 1) return;
-                     carousalSlide.style.transition ="transform 0.4s ease-in-out";
-                     counter++;
-                     carousalSlide.style.transform ='translate(' +(-size * counter) +'px)';
-                     
-                 });
-
-                 prevBtn.addEventListener('click',() =>{
-                     if(counter <= 0) return;
-                     carousalSlide.style.transition ="transform 0.4s ease-in-out";
-                     counter--;
-                     carousalSlide.style.transform ='translate(' +(-size * counter) +'px)';
-                     
-                 });
-
-
-                 carousalSlide.addEventListener('transitionend', () =>{
-                     if(carousalImages[counter].id==='lastimage-clone'){
-                         carousalSlide.style.transition= "none";
-                         counter= carousalImages.length-2;
-                         carousalSlide.style.transform ='translate(' +(-size * counter) +'px)';
-                         }
-                     if(carousalImages[counter].id==='firstimage-clone'){
-                         carousalSlide.style.transition= "none";
-                         counter= carousalImages.length - counter;
-                         carousalSlide.style.transform ='translate(' +(-size * counter) +'px)';
-                         }      
-
-                 });
-
-                 window.onorientationchange = function() { 
-                 var orientation = window.orientation; 
-                 switch(orientation) { 
-                 case 0:
-                 case 90:
-                 case -90: window.location.reload(); 
-                 break; } 
-                 };
-
-    
-
-
-
+             window.onorientationchange = function() { 
+             var orientation = window.orientation; 
+             switch(orientation) { 
+             case 0:
+             case 90:
+             case -90: window.location.reload(); 
+             break; } 
+             };
      });
   </script>
 </body>
